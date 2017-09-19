@@ -1,5 +1,5 @@
-const admins = require('../models/user.js');
-const app = require('../../server.js');
+const users = require('../models/user.js');
+const sessions = require('../sessions.js');
 const db = require('../index.js');
 const bcrypt = require('promised-bcrypt');
 
