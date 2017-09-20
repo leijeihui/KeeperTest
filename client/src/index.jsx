@@ -1,15 +1,22 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Landing from './components/Landing.jsx';
 import {BrowserRouter as Router, Route, Link, HashRouter} from 'react-router-dom';
+import configureStore from '../redux/store';
+import { Provider, connect } from 'react-redux';
+import Landing from './components/Landing.jsx';
+
+let store = configureStore();
 
 render(
-  <HashRouter>
-    <div>
-      <Route exact path="/" component={() => {
-        return <Landing />;
-      }} />
-    </div>
-  </HashRouter>, 
+  <Provider store = {store}>
+    <HashRouter>
+      <div>
+        <Route exact path="/" component={() => {
+          return <Landing />;
+        }} />
+      </div>
+    </HashRouter>
+  </Provider>, 
   document.getElementById('app')
 );
+
