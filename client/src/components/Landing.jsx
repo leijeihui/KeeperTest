@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import actions from '../../redux/actions';
 
 class Landing extends React.Component {
   constructor(props) {
@@ -12,4 +14,8 @@ class Landing extends React.Component {
   }
 }
 
-export default Landing;
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps)(Landing);
