@@ -10,6 +10,15 @@ module.exports = {
         res.sendStatus(201);
       });
     });
+  },
+
+  getProjects: (req, res) => {
+    let username = req.body.user;
+    db.select('id'). from('users').where({username: username}).then(userData => {
+      db.select().from('portfolios').where({user_id: userData[0].id}).then(projects => {
+        res.json(projects);
+      });
+    });
   }
 };
 
