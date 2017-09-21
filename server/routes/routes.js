@@ -5,6 +5,7 @@ const portfolioCtrl = require('../db/controllers/portfolioCtrl.js');
 routes.post('/signin', userCtrl.signin);
 routes.post('/signup', userCtrl.signup);
 routes.post('/addProject', portfolioCtrl.addProject);
+routes.get('/getProjects', portfolioCtrl.getProjects);
 
 module.exports = routes;
 
