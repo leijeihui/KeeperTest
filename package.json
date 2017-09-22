@@ -4,7 +4,9 @@
   "description": "About Me Page",
   "main": "index.js",
   "scripts": {
-       "start": "./node_modules/.bin/webpack --watch & nodemon --ignore 'client/**/*' ./server/server.js & clear"
+    "build-css": "node-sass-chokidar  client/src/scss/ -o client/src/styles/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start": "./node_modules/.bin/webpack --watch & nodemon --ignore 'client/**/*' ./server/server.js & clear"
   },
   "repository": {
     "type": "git",
@@ -34,13 +36,14 @@
     "knex": "^0.12.6",
     "morgan": "^1.8.0",
     "mysql": "^2.13.0",
+    "node-sass-chokidar": "0.0.3",
     "promised-bcrypt": "^0.2.1",
     "q": "^1.4.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2",
     "react-router": "^4.0.0",
     "react-router-dom": "^4.0.0-beta.8",
-    "react-redux": "^5.0.2",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
     "request": "^2.79.0",
@@ -50,10 +53,10 @@
     "webpack-dev-server": "^2.3.0"
   },
   "devDependencies": {
-    "react-logger": "^1.1.0",
-    "redux-logger": "^2.8.1",
     "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "react-logger": "^1.1.0",
+    "redux-logger": "^2.8.1"
   },
   "engines": {
     "node": "7.2.1"
