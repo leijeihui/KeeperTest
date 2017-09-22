@@ -4,4 +4,4 @@ client/public/bundle.js
 build/
 dist/
 client/public/bundle.js
-client/src/stlyes/*.css
+client/src/styles/*.css
