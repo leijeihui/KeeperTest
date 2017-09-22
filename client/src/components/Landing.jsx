@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import actions from '../../redux/actions';
+import css from '../styles/Landing.css';
 
 class Landing extends React.Component {
   constructor(props) {
@@ -9,7 +10,14 @@ class Landing extends React.Component {
 
   render() {
     return (
-      <div>Hello World! x2</div>
+      <div>
+        <div classID="logo">Blogger</div>
+        <hr />
+        <div className="landing-view">
+          <div className="landing-content">Hello World!</div>
+        </div>
+      </div>
+
     );
   }
 }
