@@ -10,8 +10,8 @@ class Landing extends React.Component {
 
   render() {
     return (
-      <div>
-        <div classID="logo">Blogger</div>
+      <div className="container">
+        <div className="logo">Blogger</div>
         <hr />
         <div className="landing-view">
           <div className="landing-content">Hello World!</div>
