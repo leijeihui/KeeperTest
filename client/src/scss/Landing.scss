@@ -1,9 +1,26 @@
-.landing-view {
-  background-color: greenyellow;
+.container {
+  height: 100vh;
 
-  .landing-content {
-    width: 33%;
-    height: 80%;
-    margin: auto;
-  };
+  .logo {
+    font-size: 32px;
+  }
+
+  .landing-view {
+    background-color: greenyellow;
+    min-height: 480px;
+    height:70%;
+    width:100%;
+    display: block;
+    box-sizing: border-box; 
+
+    .landing-content {
+      width: 33%;
+      height: 70%;
+      margin: 0 auto;
+      top: 15%;
+      border: 1px solid red;
+      position: relative;
+    };
+  }
 }
+
