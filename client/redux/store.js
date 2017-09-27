@@ -8,7 +8,8 @@ let finalCreateStore = compose(
 )(createStore);
 
 const configureStore = (initialState = {
-  projects: []
+  projects: [],
+  about: []
 }) => {
   return finalCreateStore(reducer, initialState);
 };

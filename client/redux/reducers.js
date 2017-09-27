@@ -5,6 +5,11 @@ const reducer = (state, action) => {
       projects: action.payload
     });
   
+  case 'GET_ABOUT':
+    return Object.assign({}, state, {
+      about: action.payload
+    });
+
   default: return state;
   }
 };
