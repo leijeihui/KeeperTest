@@ -6,6 +6,7 @@ import { Provider, connect } from 'react-redux';
 import Landing from './components/Landing.jsx';
 import Signup from './components/Signup.jsx';
 import Signin from './components/Signin.jsx';
+import About from './components/About.jsx';
 
 let store = configureStore();
 
@@ -21,7 +22,10 @@ render(
         }} />
         <Route exact path="/signin" component={()=> {
           return <Signin />;
-        }} />;
+        }} />
+        <Route exact path="/:username/about" component={() => {
+          return <About />;
+        }} />
       </div>
     </HashRouter>
   </Provider>, 
