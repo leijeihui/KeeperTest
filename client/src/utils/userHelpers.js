@@ -3,7 +3,7 @@ import axios from 'axios';
 
 let handleUserSignup = (userInfo, callback) => {
   axios.post('/api/signup', userInfo).then(data => {
-    window.location.href = '/#/' + userInfo.username;
+    window.location.href = `/#/${userInfo.username}/about`;
   }).catch(err => {
     if (err) { console.error(err); }
   });
@@ -11,7 +11,7 @@ let handleUserSignup = (userInfo, callback) => {
 
 let handleUserSignin = (userInfo, callback) => {
   axios.post('/api/signin', userInfo).then(data => {
-    window.location.href = '/#/' + userInfo.username;
+    window.location.href = `/#/${userInfo.username}/about`;
   }).catch(err => {
     if (err) { console.error(err); }
   });
