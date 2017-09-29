@@ -9,6 +9,15 @@ class Nav extends React.Component {
   }
 
   render() {
+
+    let whichNav = () => {
+      if (this.props.about.length) {
+        return <div></div>;
+      } else {
+        return <div></div>;
+      }
+    };
+
     return (
       <div>
         
