@@ -11,6 +11,13 @@ let actions = {
       type: 'GET_ABOUT',
       payload: about
     };
+  },
+
+  currentUser: (user) => {
+    return {
+      type: 'CURRENT_USER',
+      payload: user,
+    };
   }
 };
 

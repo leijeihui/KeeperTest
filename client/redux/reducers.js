@@ -10,6 +10,11 @@ const reducer = (state, action) => {
       about: action.payload
     });
 
+  case 'CURRENT_USER':
+    return Object.assign({}, state, {
+      currentUser: action.payload
+    });
+
   default: return state;
   }
 };
