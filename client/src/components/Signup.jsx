@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { handleUserSignup } from '../utils/userHelpers.js';
+import { connect } from 'react-redux';
+import actions from '../../redux/actions';
 
 class Signup extends React.Component {
   constructor(props) {
@@ -18,7 +20,9 @@ class Signup extends React.Component {
       lastname: outer.refs.lastname.value,
       email: outer.refs.email.value
     };
-    handleUserSignup(signupInfo);
+    handleUserSignup(signupInfo, (username) => {
+      outer.props.dispatch(actions.currentUser(username));
+    });
   }
 
 
@@ -38,4 +42,8 @@ class Signup extends React.Component {
   }
 }
 
-export default Signup;
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps)(Signup);

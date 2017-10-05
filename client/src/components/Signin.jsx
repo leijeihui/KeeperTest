@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import {handleUserSignin} from '../utils/userHelpers.js';
+import { connect } from 'react-redux';
+import actions from '../../redux/actions';
 
 class Signin extends React.Component {
   constructor(props) {
@@ -15,7 +17,9 @@ class Signin extends React.Component {
       username: outer.refs.username.value,
       password: outer.refs.password.value
     };
-    handleUserSignin(signInInfo);
+    handleUserSignin(signInInfo, (username) => {
+      outer.props.dispatch(actions.currentUser(username));
+    });
   }
 
   render() {
@@ -31,4 +35,9 @@ class Signin extends React.Component {
   }
 }
 
-export default Signin;
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps)(Signin);
+
