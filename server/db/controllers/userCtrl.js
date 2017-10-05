@@ -24,7 +24,6 @@ module.exports = {
   signin: (req, res) => {
     let user = req.body; //has username and password;
     db.select().from('users').where({username: user.username}).then(userData => {
-      console.log(userData);
       if (userData.length) {
         bcrypt.compare(user.password, userData[0].password).then(isUser => {
           if (isUser) {
@@ -42,8 +41,9 @@ module.exports = {
 
 
   about: (req, res) => {
-    if (req.session.user) {
-      db.select('firstname', 'lastname', 'description', 'picture').from('users').where({username: req.session.user}).then(userData => {
+    let user = req.query.username || req.session.user;
+    if (user) {
+      db.select('username', 'firstname', 'lastname', 'description', 'picture').from('users').where({username: req.session.user}).then(userData => {
         res.json(userData);
       });
     }
