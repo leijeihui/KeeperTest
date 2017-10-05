@@ -13,7 +13,9 @@ class About extends React.Component {
   }
 
   handleAboutInfo () {
-    axios.get('/api/:username/about').then(userObj => {
+    let outer = this;
+    let username = {params: {username: outer.props.currentUser}};
+    axios.get('/api/:username/about', username).then(userObj => {
       this.props.dispatch(actions.getAbout(userObj.data[0]));
       console.log(this.props);
     });
