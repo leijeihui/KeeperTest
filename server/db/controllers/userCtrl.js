@@ -47,5 +47,13 @@ module.exports = {
         res.json(userData);
       });
     }
+  },
+
+  isLoggedIn: (req, res) => {
+    if (req.session.user) {
+      res.send(true);
+    } else {
+      res.send(false);
+    }
   }
 };

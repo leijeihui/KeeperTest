@@ -10,6 +10,6 @@ routes.post('/addProject', portfolioCtrl.addProject);
 routes.post('/s3', s3Ctrl);
 routes.get('/getProjects', portfolioCtrl.getProjects);
 routes.get('/:username/about', userCtrl.about);
-
+routes.get('/isLoggedIn', userCtrl.isLoggedIn);
 module.exports = routes;
 
