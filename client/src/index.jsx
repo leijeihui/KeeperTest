@@ -7,13 +7,17 @@ import Landing from './components/Landing.jsx';
 import Signup from './components/Signup.jsx';
 import Signin from './components/Signin.jsx';
 import About from './components/About.jsx';
+import Nav from './components/Nav.jsx';
 
 let store = configureStore();
 
 render(
   <Provider store = {store}>
     <HashRouter>
-      <div>
+      <div>        
+        <div className="logo">Blogger</div>
+        <hr />
+        <Nav />
         <Route exact path="/" component={() => {
           return <Landing />;
         }} />
