@@ -11,8 +11,6 @@ class Landing extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="logo">Blogger</div>
-        <hr />
         <div className="landing-view">
           <div className="landing-content">Hello World!</div>
         </div>
