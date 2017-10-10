@@ -30,12 +30,16 @@ class Nav extends React.Component {
   render() {
 
     let whichNav = () => {
+      let outer = this;
+      console.log(this.props);
       if (!this.state.loggedIn) {
         return (<div>
           <form>
             <input type="text" ref = "search" placeholder="Search User..." /> 
             <button>Search</button>
           </form>
+          <a href="/#/signin"> Signin </a>
+          <a href="/#/signup"> Signup </a>
         </div>);
       } else {
         return (<div>
@@ -43,8 +47,8 @@ class Nav extends React.Component {
             <input type="text" ref = "search" placeholder="Search User..." /> 
             <button>Search</button>
           </form>
-          <a href="#">About</a>
-          <a href="#">Portfolio</a>
+          <a href={`/#/${outer.props.currentUser}/about`}> About </a>
+          <a href={`/#/${outer.props.currentUser}/portfolio`}> Portfolio </a>
         </div>);
       }
     };
@@ -57,4 +61,9 @@ class Nav extends React.Component {
   }
 }
 
-export default Nav;
+
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps)(Nav);
