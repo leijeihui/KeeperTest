@@ -55,5 +55,13 @@ module.exports = {
     } else {
       res.send(false);
     }
+  },
+
+  logout: (req, res) => {
+    if (req.session) {
+      req.session.destroy();
+    }
+    
+    res.sendStatus(201);
   }
 };
