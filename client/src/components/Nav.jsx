@@ -3,28 +3,18 @@ import actions from '../../redux/actions.js';
 import {connect} from 'react-redux';
 import { Link } from 'react-router';
 import axios from 'axios';
+import { handleUserLogout } from '../utils/userHelpers.js';
 
 class Nav extends React.Component {
   constructor(props) {
     super(props);
-
-    this.checkIfLoggedIn = this.checkIfLoggedIn.bind(this);
-    this.state = {};
-    
+    this.handleLogout = this.handleLogout.bind(this);
   }
 
-  componentDidMount () {
-    this.checkIfLoggedIn();
-  }
 
-  checkIfLoggedIn () {
-    let outer = this;
-    axios.get('/api/isLoggedIn').then(loggedIn => {
-      console.log(loggedIn.data);
-      outer.setState({
-        loggedIn: loggedIn.data
-      });
-    });
+  handleLogout () {
+    handleUserLogout();
+    this.props.dispatch(actions.loggedIn(false));
   }
 
   render() {
@@ -32,7 +22,7 @@ class Nav extends React.Component {
     let whichNav = () => {
       let outer = this;
       console.log(this.props);
-      if (!this.state.loggedIn) {
+      if (!outer.props.loggedIn) {
         return (<div>
           <form>
             <input type="text" ref = "search" placeholder="Search User..." /> 
@@ -49,6 +39,7 @@ class Nav extends React.Component {
           </form>
           <a href={`/#/${outer.props.currentUser}/about`}> About </a>
           <a href={`/#/${outer.props.currentUser}/portfolio`}> Portfolio </a>
+          <a onClick={this.handleLogout}> Logout </a>
         </div>);
       }
     };
