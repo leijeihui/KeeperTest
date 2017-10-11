@@ -19,7 +19,16 @@ let handleUserSignin = (userInfo, callback) => {
   });
 };
 
+let handleUserLogout = (callback) => {
+  axios.post('/api/logout').then(data => {
+    window.location.href = '/#/';
+  }).catch(err => {
+    if (err) { console.error(err); }
+  });
+};
+ 
 export {
   handleUserSignup,
-  handleUserSignin
+  handleUserSignin,
+  handleUserLogout
 };
