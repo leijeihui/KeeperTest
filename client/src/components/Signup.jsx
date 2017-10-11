@@ -22,6 +22,7 @@ class Signup extends React.Component {
     };
     handleUserSignup(signupInfo, (username) => {
       outer.props.dispatch(actions.currentUser(username));
+      outer.props.dispatch(actions.loggedIn(true));
     });
   }
 
