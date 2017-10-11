@@ -18,6 +18,13 @@ let actions = {
       type: 'CURRENT_USER',
       payload: user,
     };
+  },
+
+  loggedIn: (bool) => {
+    return {
+      type: 'LOGGED_IN',
+      payload: bool,
+    };
   }
 };
 

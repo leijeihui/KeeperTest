@@ -15,6 +15,11 @@ const reducer = (state, action) => {
       currentUser: action.payload
     });
 
+  case 'LOGGED_IN':
+    return Object.assign({}, state, {
+      loggedIn: action.payload
+    });
+
   default: return state;
   }
 };

@@ -10,7 +10,8 @@ let finalCreateStore = compose(
 const configureStore = (initialState = {
   projects: [],
   about: [],
-  currentUser: ''
+  currentUser: '',
+  loggedIn: false,
 }) => {
   return finalCreateStore(reducer, initialState);
 };
