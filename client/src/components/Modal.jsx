@@ -10,6 +10,7 @@ export class Modal extends React.Component {
   }
 
   render() {
+    
     return (
       <div >
         {/*<!-- Trigger the modal with a button -->*/}
@@ -26,7 +27,7 @@ export class Modal extends React.Component {
               </div>
               <br />
               <br />
-              
+
               <div className="modal-body">
 
                 <div>
@@ -66,8 +67,6 @@ export class Modal extends React.Component {
                 </div>
                 <hr />
 
-
-
                 <table>
                   <tr>
                     <th>Secure File Storage</th>
@@ -84,12 +83,9 @@ export class Modal extends React.Component {
                 </div>
 
               </div>
-
-            </div>
-            
+            </div>          
           </div>
-        </div>
-        
+        </div> 
       </div>
     );
   }
