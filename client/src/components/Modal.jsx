@@ -10,7 +10,7 @@ export class Modal extends React.Component {
   }
 
   render() {
-    
+
     return (
       <div >
         {/*<!-- Trigger the modal with a button -->*/}
@@ -23,29 +23,27 @@ export class Modal extends React.Component {
             <div className="modal-content">
               <div className="modal-header">
                 <button type="button" className="close" data-dismiss="modal">&times;</button><br />
-                <h7 className="modal-title">Account Information</h7>
+                <h6 className="modal-title">Account Information</h6>
               </div>
-              <br />
-              <br />
 
               <div className="modal-body">
 
-                <div>
-                  <img className="modal-icon" src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/alert-triangle-red-128.png" />
-                  <span className="modal-alert">ALERT:</span> Backup and Sync your Keeper Info.
+                <div style={{'height': '30px'}}>
+                  <img className="modal-icon" style={{'height': '19px', 'width': '22px'}} src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/alert-triangle-red-128.png" />
+                  <span className="modal-alert">ALERT:</span> <span className="modal-alert-text">Backup and Sync your Keeper Info.</span>
                   <button className="modal-alert-btn">Turn On Now</button>
                 </div>
                 <hr />
 
                 <div>
-                  <img className="modal-icon" src="https://image.flaticon.com/icons/png/128/181/181549.png" />
+                  <img className="modal-icon" style={{'height': '20px', 'width': '20px'}} src="https://image.flaticon.com/icons/png/128/181/181549.png" />
                   <span className="modal-email">user123@gmail.com</span>
                   <button>Switch Account</button>
                 </div>
                 <hr />
 
                 <div>
-                  <img className="modal-icon" src="https://www.shareicon.net/data/128x128/2016/08/06/807653_tools_512x512.png" />
+                  <img className="modal-icon" style={{'height': '18px', 'width': '22px'}} src="https://www.shareicon.net/data/128x128/2016/08/06/807653_tools_512x512.png" />
                   <span className="modal-emergency-access">Account Emergency Access</span>
                   <button>Manage</button>
                 </div>
