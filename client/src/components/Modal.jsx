@@ -47,7 +47,7 @@ export class Modal extends React.Component {
                   <span className="modal-emergency-access">Account Emergency Access</span>
                   <button>Manage</button>
                 </div>
-                <hr />
+                <hr style={{'marginBottom': '10px'}}/>
 
                 <div>
                   <table>
@@ -63,17 +63,17 @@ export class Modal extends React.Component {
                   </table>
                  
                 </div>
-                <hr />
+                <hr style={{'marginTop': '9px'}} />
 
                 <table>
                   <tr>
                     <th>Secure File Storage</th>
                   </tr>
                   <tr>
-                    <td>5 Free Uploads Remaining</td>
+                    <td style={{'paddingTop': '5px'}}>5 Free Uploads Remaining</td>
                   </tr>
                 </table>
-                <hr />
+                <hr style={{'marginTop': '10px'}}/>
 
                 <div className="recent-activity-ctn">
                   <span className="modal-recent-activity">Recent Activity</span>
