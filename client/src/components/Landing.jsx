@@ -1,6 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import actions from '../../redux/actions';
+import Modal from './Modal.jsx';
 import css from '../styles/Landing.css';
 
 class Landing extends React.Component {
@@ -13,6 +12,7 @@ class Landing extends React.Component {
       <div className="container">
         <div className="landing-view">
           <div className="landing-content">Hello World!</div>
+          <Modal />
         </div>
       </div>
 
@@ -20,8 +20,4 @@ class Landing extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return state;
-};
-
-export default connect(mapStateToProps)(Landing);
+export default Landing;

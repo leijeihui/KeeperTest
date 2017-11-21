@@ -1,0 +1,79 @@
+.modal-dialog {
+  max-width: none;
+}
+
+.modal-content {
+  top: 15vh;
+  margin: 0 auto;
+  width: 50vw;
+  min-width: 470px;
+
+  .modal-header {
+    justify-content: initial;
+    display: initial;
+    padding: 0;
+    padding-left: 10px;
+    border: none;
+    color: black;
+    font-weight: bold;
+
+    .close {
+      padding: 0;
+      margin-top: 1px;
+      margin-right: 10px;
+      float: right;
+    }
+  }
+
+  .modal-body {
+    padding: 0;
+
+    button {
+      float: right;
+      margin-right: 10px;
+      width: 10vw;
+      min-width: 100px;
+      font-size: 13px;
+      color: white;
+      background-color: #424044;
+      border: 1px solid lightgray;
+      border-radius: 2px;
+    }
+
+    .modal-icon {
+      height: 18px;
+      width: 18px;
+      margin: 0 10px;
+    }
+
+    .modal-alert {
+      color: red;
+      font-weight: bold;
+    }
+
+    .modal-alert-btn {
+      background-color: red;
+    }
+
+    table {
+      margin-left: 10px;
+
+      th{
+        font-size: small;
+        font-weight: bold;
+      }
+
+      td {
+        width: 50%;
+      }
+    }
+
+    .recent-activity-ctn{
+      padding-bottom: 15px;
+
+      .modal-recent-activity {
+        padding-left: 10px;
+      }
+    }
+  }
+}
